@@ -102,14 +102,26 @@ header{
 .projects{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4,17.5rem);
+    /* grid-template-rows: repeat(4,17.5rem); */
     /* column-gap: 1.25rem; */
 }
 
-.projects_project-left{
-    grid-column: 1 / 5;
-    grid-row: 1;
+.projects__project {
+    margin-bottom: 1.5rem;
+    /* shared rules here */
 }
+
+.projects__project--left {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border-top-right-radius: 15px;
+}
+
+.projects__project--right {
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
 
 .projects__project__title-left{
     background-color: grey;
@@ -119,7 +131,14 @@ header{
     justify-content: space-between;
     border-top-right-radius: 15px;
 }
-
+.projects__project__title-left{
+    background-color: grey;
+    color: #f2eae1;
+    padding: 6.25rem 1.25rem 0rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 15px;
+}
 .projects__project__title-name{
     justify-self: flex-start;
     align-self: flex-end;
@@ -133,6 +152,12 @@ header{
     color: #2a1e12;
     padding: 1.25rem;
     border-bottom-right-radius: 15px;
+}
+.projects__project__body-right{
+    background-color: #ddb892;
+    color: #2a1e12;
+    padding: 1.25rem;
+    border-bottom-left-radius: 15px;
 }
 
 .projects__project__body-button{
