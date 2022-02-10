@@ -114,53 +114,42 @@ header{
 .projects__project--left {
     grid-column-start: 1;
     grid-column-end: 5;
-    border-top-right-radius: 15px;
-}
-
-.projects__project--right {
-    grid-column-start: 2;
-    grid-column-end: 6;
 }
 
 
-.projects__project__title-left{
+.project__title{
     background-color: grey;
     color: #f2eae1;
     padding: 6.25rem 1.25rem 0rem 1.25rem;
     display: flex;
     justify-content: space-between;
+}
+
+.project__title--left{
     border-top-right-radius: 15px;
 }
-.projects__project__title-left{
-    background-color: grey;
-    color: #f2eae1;
-    padding: 6.25rem 1.25rem 0rem 1.25rem;
-    display: flex;
-    justify-content: space-between;
-    border-top-left-radius: 15px;
-}
-.projects__project__title-name{
+.project__title--name{
     justify-self: flex-start;
     align-self: flex-end;
 }
-.projects__project__title-date{
+.project__title--date{
     justify-self: flex-end;
     align-self: flex-end;
 }
-.projects__project__body-left{
+
+.projects__project__body{
     background-color: #ddb892;
     color: #2a1e12;
     padding: 1.25rem;
     border-bottom-right-radius: 15px;
 }
-.projects__project__body-right{
-    background-color: #ddb892;
-    color: #2a1e12;
+
+.projects__project__body--left{
     padding: 1.25rem;
-    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
-.projects__project__body-button{
+.project__body--button{
     font-size: 1.125rem;
     color: #f2eae1;
     background-color: #7e5539;
