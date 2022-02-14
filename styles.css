@@ -1,20 +1,76 @@
+/* VARIABLES */
 :root{
     --total-rows: 100;
     --total-columns:5;
-    --color-brown: #7e5539
+    --right-start:2;
+    --right-end:6;
+    --left-start:1;
+    --left-end:5;
+
+    --color-brown: #7e5539;
     --color-light-brown: #ddb892;
     --color-beige: #f2eae1;
     --color-black: #2a1e12;
+    --color-navy: #31313A;
 
     --h1-size: 2rem;
     --h2-size: 1.25rem;
+    --p-size: 1rem;
     --menu-size: 1.25rem;
 }
 
+/* FONTS */
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('fonts/NotoSerif.woff2') format('woff2'),
+        url('fonts/NotoSerif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Regular.woff2') format('woff2'),
+        url('WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Bold.woff2') format('woff2'),
+        url('fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-BoldItalic.woff2') format('woff2'),
+        url('fonts/WorkSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* STYLES */
 html{
     box-sizing: border-box;
     font-size: 100%;
 }
+
+h1,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Work Sans', sans-serif;
+    font-style: bold;
+}
+
 h1{
     font-size: var(--h1-size);
     margin: 0;
@@ -22,6 +78,8 @@ h1{
 h2{
     font-size: var(--h2-size);
     margin: .25rem 0 0 0;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
 }
 
 h3{
@@ -33,6 +91,7 @@ h4{
 
 
 p{
+    font-family: 'Noto Serif', serif;
     font-size: 1rem;
 }
 
@@ -53,6 +112,8 @@ header{
 }
 
 .menu{
+    font-family: 'Work Sans', sans-serif;
+    font-style: italic;
     font-size: var(--menu-size);
     color: #2a1e12;
     justify-self: flex-end;
@@ -64,7 +125,7 @@ header{
 }
 
 .hero__title{
-    background-color: grey;
+    background-color: var(--color-navy);
     color: #f2eae1;
     padding: 6.25rem 1.25rem 0rem 1.25rem;
     display: flex;
@@ -99,9 +160,13 @@ header{
     padding: 1rem;
 }
 
+.title-projects{
+    margin-top: 1.25rem;
+}
+
 .projects{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(var(--total-columns), 1fr);
     /* grid-template-rows: repeat(4,17.5rem); */
     /* column-gap: 1.25rem; */
 }
@@ -112,13 +177,18 @@ header{
 }
 
 .projects__project--left {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-start: var(--left-start);
+    grid-column-end: var(--left-end);
+}
+
+.projects__project--right {
+    grid-column-start: var(--right-start);
+    grid-column-end: var(--right-end);
 }
 
 
 .project__title{
-    background-color: grey;
+    background-color: var(--color-navy);
     color: #f2eae1;
     padding: 6.25rem 1.25rem 0rem 1.25rem;
     display: flex;
@@ -128,6 +198,11 @@ header{
 .project__title--left{
     border-top-right-radius: 15px;
 }
+
+.project__title--right{
+    border-top-left-radius: 15px;
+}
+
 .project__title--name{
     justify-self: flex-start;
     align-self: flex-end;
@@ -141,14 +216,14 @@ header{
     background-color: #ddb892;
     color: #2a1e12;
     padding: 1.25rem;
-    border-bottom-right-radius: 15px;
 }
 
 .projects__project__body--left{
-    padding: 1.25rem;
     border-bottom-right-radius: 15px;
 }
-
+.projects__project__body--right{
+    border-bottom-left-radius: 15px;
+}
 .project__body--button{
     font-size: 1.125rem;
     color: #f2eae1;
@@ -158,59 +233,87 @@ header{
     padding: 1rem;
 }
 
-@media (min-width: 768px){
+footer{
+    background-color: var(--color-brown);
+    margin: 1rem 0 0 0;
+    padding: 2rem;
+}
+.footer__text{
+    font-size: var(--p-size);
+    text-align:center;
+    color: var(--color-beige);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 600px){
    *{
     --h1-size: 2.5rem;
     --h2-size: 1.625rem;
+    --p-size: 1.25rem;
     --menu-size: 1.5rem;
+    --total-columns:1;
+    --left-end: 1;
+    --right-start:1;
+    --right-end:1;
+   }
+   .projects{
+       margin: 3.625rem;
+   }
+
+   .project__title{
+       border-top-left-radius: 15px;
+       border-top-right-radius: 15px;
+   }
+   .projects__project__body{
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
    }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1000px){
     *{
      --h1-size: 2.65rem;
      --h2-size: 1.8rem;
      --menu-size: 1.8rem;
+     --total-columns: 2;
+     --left-start:1;
+     --left-end:2;
+     --right-start:2;
+     --right-end:3;
     }
+
+    header{
+        background-color: var(--color-brown);
+    }
+    .title{
+        color: var(--color-beige);
+    }
+    .menu{
+        color:var(--color-beige);
+    }
+
+    .menu :hover{
+        color: var(--color-black);
+        cursor: default;
+    }
+    
+    main{
+        margin: 1.875rem;
+    }
+
+    .projects{
+        margin: 0rem;
+    }
+    .projects__project--left{
+        margin-right: .5rem;
+    }
+    .projects__project--right{
+        margin-left: .5rem;
+    }
+
+    button :hover{
+        cursor: pointer;
+        border-color: var(--color-beige);
+    }
+    
  }
-/* .wrapper {
-    display: grid;
-    grid-template-columns: repeat(var(--total-columns), 1fr);
-    grid-auto-rows: repeat(var(--total-rows), 1.25rem);
-}
-
-.one {
-    grid-column: 1 / 3;
-    grid-row: 1 / 8;
-    background-color: darkgreen;
-}
-
-.two {
-    grid-column: 2 / 4;
-    grid-row: 9 21;
-    background-color: palevioletred;
-} */
-
-/* .three {
-    grid-column: 1;
-    grid-row: 2 / 5;
-    background-color: purple;
-}
-
-.four {
-    grid-column: 3;
-    grid-row: 3;
-    background-color: brown;
-}
-
-.five {
-    grid-column: 2;
-    grid-row: 4;
-    background-color: chocolate;
-}
-
-.six {
-    grid-column: 3;
-    grid-row: 4;
-    background-color: darkgray;
-} */
