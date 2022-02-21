@@ -16,7 +16,7 @@
     --h1-size: 2rem;
     --h2-size: 1.25rem;
     --p-size: 1rem;
-    --menu-size: 1.25rem;
+    --menu-size: 1rem;
 }
 
 /* FONTS */
@@ -104,6 +104,9 @@ header{
     display: flex;
     justify-content: space-between;
 }
+a{
+    text-decoration:none;
+}
 
 .title{
     color: #2a1e12;
@@ -122,6 +125,7 @@ header{
 
 .menu__link{
     margin: .25rem;
+    color: var(--color-black);
 }
 
 .hero__title{
@@ -206,10 +210,12 @@ header{
 .project__title--name{
     justify-self: flex-start;
     align-self: flex-end;
+    text-align: left;
 }
 .project__title--date{
     justify-self: flex-end;
     align-self: flex-end;
+    text-align: right;
 }
 
 .projects__project__body{
@@ -225,12 +231,14 @@ header{
     border-bottom-left-radius: 15px;
 }
 .project__body--button{
-    font-size: 1.125rem;
-    color: #f2eae1;
     background-color: #7e5539;
     border-color: transparent;
     border-radius: 6px;
     padding: 1rem;
+}
+.project__body--button--text{
+    font-size: 1.125rem;
+    color: #f2eae1;
 }
 
 footer{
@@ -288,7 +296,7 @@ footer{
     .title{
         color: var(--color-beige);
     }
-    .menu{
+    .menu__link{
         color:var(--color-beige);
     }
 

@@ -1,0 +1,21 @@
+main{
+    padding: 0rem 1.25rem;
+}
+
+.first-section{
+    margin-top: 0rem;
+}
+.case-content{
+    margin-bottom: 1rem;
+}
+.case-content__title{
+    margin-bottom: .0rem;
+}
+.case-content__text{
+    margin-top: .5rem;
+    line-height: 1.5rem;
+}
+
+footer{
+    margin-top: 0rem;
+}
