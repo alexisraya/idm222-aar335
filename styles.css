@@ -93,6 +93,7 @@ h4{
 p{
     font-family: 'Noto Serif', serif;
     font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 body{
@@ -153,6 +154,9 @@ a{
     padding: 1.25rem;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+.hero__body-description{
+    max-width: 1090px;
 }
 
 .hero__body-button{
@@ -257,12 +261,18 @@ footer{
    *{
     --h1-size: 2.5rem;
     --h2-size: 1.625rem;
-    --p-size: 1.25rem;
+    --p-size: 1rem;
     --menu-size: 1.5rem;
     --total-columns:1;
     --left-end: 1;
     --right-start:1;
     --right-end:1;
+   }
+   .hero__title{
+    padding: 6.25rem 4.0625rem 0rem 4.0625rem;
+   }
+   .hero__body{
+    padding: 1.25rem 4.0625rem;
    }
    .projects{
        margin: 3.625rem;
@@ -271,17 +281,17 @@ footer{
    .project__title{
        border-top-left-radius: 15px;
        border-top-right-radius: 15px;
+       padding: 6.25rem 2.5rem 0rem 2.5rem;
    }
    .projects__project__body{
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        padding: 1.25rem 2.5rem;
    }
 }
 
 @media (min-width: 1000px){
     *{
-     --h1-size: 2.65rem;
-     --h2-size: 1.8rem;
      --menu-size: 1.8rem;
      --total-columns: 2;
      --left-start:1;
