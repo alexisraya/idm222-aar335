@@ -15,6 +15,8 @@
 
     --h1-size: 2rem;
     --h2-size: 1.25rem;
+    --h3-size: 1.75rem;
+    --h4-size: 1rem;
     --p-size: 1rem;
     --menu-size: 1rem;
 }
@@ -37,6 +39,25 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Medium.woff2') format('woff2'),
+        url('fonts/WorkSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-SemiBold.woff2') format('woff2'),
+        url('fonts/WorkSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 @font-face {
     font-family: 'Work Sans';
@@ -63,6 +84,7 @@ html{
 }
 
 h1,
+h2,
 h3,
 h4,
 h5,
@@ -78,15 +100,20 @@ h1{
 h2{
     font-size: var(--h2-size);
     margin: .25rem 0 0 0;
-    font-family: 'Work Sans', sans-serif;
     font-style: normal;
+    font-weight: 300;
 }
 
 h3{
-    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--h3-size);
 }
 h4{
-    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--h4-size);
+    line-height: 1.5rem;
 }
 
 
@@ -105,9 +132,14 @@ header{
     display: flex;
     justify-content: space-between;
 }
+main{
+    margin: 0rem 1.25rem;
+}
 a{
     text-decoration:none;
 }
+
+/*header styles*/
 
 .title{
     color: #2a1e12;
@@ -129,122 +161,55 @@ a{
     color: var(--color-black);
 }
 
-.hero__title{
-    background-color: var(--color-navy);
-    color: #f2eae1;
-    padding: 6.25rem 1.25rem 0rem 1.25rem;
+/*intro styles*/
+.intro{
     display: flex;
+    min-height: 85vh;
+    flex-direction: column;
     justify-content: space-between;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
 }
-.hero__title-name{
-    font-size: 1.625rem;
-    justify-self: flex-start;
-    align-self: flex-end;
+.intro__text--opening{
+    margin: 0 0 2.625rem 0;
 }
-.hero__title-date{
-    font-size: 1.125rem;
-    justify-self: flex-end;
-    align-self: flex-end;
+.intro__text--paragraph{
+    margin: 0 0 1rem 0;
 }
-.hero__body{
-    background-color: #ddb892;
-    color: #2a1e12;
-    padding: 1.25rem;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+.intro__spacer{
+    min-height: 5vh;
 }
-.hero__body-description{
-    max-width: 1090px;
+.intro__peak{
+    align-self: center;
 }
 
-.hero__body-button{
-    font-size: 1.125rem;
-    color: #f2eae1;
-    background-color: #7e5539;
-    border-color: transparent;
-    border-radius: 6px;
-    padding: 1rem;
-}
-
-.title-projects{
-    margin-top: 1.25rem;
-}
-
+/* project styles*/
 .projects{
-    display: grid;
-    grid-template-columns: repeat(var(--total-columns), 1fr);
-    /* grid-template-rows: repeat(4,17.5rem); */
-    /* column-gap: 1.25rem; */
-}
-
-.projects__project {
-    margin-bottom: 1.5rem;
-    /* shared rules here */
-}
-
-.projects__project--left {
-    grid-column-start: var(--left-start);
-    grid-column-end: var(--left-end);
-}
-
-.projects__project--right {
-    grid-column-start: var(--right-start);
-    grid-column-end: var(--right-end);
-}
-
-
-.project__title{
-    background-color: var(--color-navy);
-    color: #f2eae1;
-    padding: 6.25rem 1.25rem 0rem 1.25rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.projects__project{
+    margin-bottom: 1.5rem;
 }
 
-.project__title--left{
-    border-top-right-radius: 15px;
+.projects__project__image{
+    background-color: var(--color-light-brown);
+    min-height: 240px;
+    box-shadow: 0px 15px 25px gray;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 }
-
-.project__title--right{
-    border-top-left-radius: 15px;
+.projects__project__image--img{
+    max-width: 100%;
+    object-fit:contain;
 }
-
-.project__title--name{
-    justify-self: flex-start;
-    align-self: flex-end;
-    text-align: left;
+.projects__project__text--title{
+    font-size: 1.25rem;
 }
-.project__title--date{
-    justify-self: flex-end;
-    align-self: flex-end;
-    text-align: right;
-}
-
-.projects__project__body{
-    background-color: #ddb892;
-    color: #2a1e12;
-    padding: 1.25rem;
-}
-
-.projects__project__body--left{
-    border-bottom-right-radius: 15px;
-}
-.projects__project__body--right{
-    border-bottom-left-radius: 15px;
-}
-.project__body--button{
-    background-color: #7e5539;
-    border-color: transparent;
-    border-radius: 6px;
-    padding: 1rem;
-}
-.project__body--button--text{
-    font-size: 1.125rem;
-    color: #f2eae1;
-}
-
 footer{
     background-color: var(--color-brown);
     margin: 1rem 0 0 0;
@@ -274,25 +239,38 @@ footer{
    .hero__body{
     padding: 1.25rem 4.0625rem;
    }
+   .menu__link{
+    margin: 1.25rem;
+   }
    .projects{
-       margin: 3.625rem;
+       display: grid;
+       grid-column: 2;
+       grid-row: 2;
+       column-gap: 2rem;
    }
-
-   .project__title{
-       border-top-left-radius: 15px;
-       border-top-right-radius: 15px;
-       padding: 6.25rem 2.5rem 0rem 2.5rem;
+   .projects__project__image{
+        min-height: 40vh;
    }
-   .projects__project__body{
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        padding: 1.25rem 2.5rem;
+   .project1{
+       grid-column: 1/2;
+       grid-row: 1/2;
    }
+   .project2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .project3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .project4{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
 }
 
 @media (min-width: 1000px){
     *{
-     --menu-size: 1.8rem;
      --total-columns: 2;
      --left-start:1;
      --left-end:2;
@@ -319,19 +297,8 @@ footer{
         margin: 1.875rem;
     }
 
-    .projects{
-        margin: 0rem;
-    }
-    .projects__project--left{
-        margin-right: .5rem;
-    }
-    .projects__project--right{
-        margin-left: .5rem;
-    }
-
-    button :hover{
-        cursor: pointer;
-        border-color: var(--color-beige);
+    .projects__project__image{
+        min-height: 80vh;
     }
     
  }

@@ -21,65 +21,88 @@
         </nav>
     </header>
     <main>
-        <div class = "hero">
-            <div class = "hero__title">
-                <h3 class="hero__title-name">HTML Project</h3>
-                <h4 class="hero__title-date">Fall 2021</h4>
+        <div class = "intro">
+            <div class = "intro__spacer">
             </div>
-            <div class = "hero__body">
-                <p class="hero__body-description"> This project consisted a non-responsive mobile portfolio site, programmed in HTML and CSS. A Github repository was created to manage and track progress. This site contained a portfolio page, resume page, and about me page.</p>
-                <button class = "hero__body-button">Read More</button>
+            <div class = "intro__text">
+                <h3 class="intro__text--opening">Hello, I'm Alexis Raya!</h3>
+                <h4 class="intro__text--paragraph">I’m a student studying User Experience and Interaction Design.</h4>
+                <h4 class="intro__text--paragraph">I seek to create and devlop meaningful and creative designs and products.</h4>
+            </div>
+            <div class = "intro__peak">
+                <h4 class = "intro__peak--text">View my work below</h4>
             </div>
         </div>
-        <h2 class = "title-projects">Other Projects</h2>
         <div class = "projects">
-
-            <!-- PROJECT 1 -->
-            <div class = "projects__project projects__project--left">
-                <div class = "project__title project__title--left">
-                    <h3 class = "project__title--name">Hydrate</h3>
-                    <h4 class = "project__title--date">Spring 2020</h4>
+            <!-- Project 1: Responsive Project -->
+            <div class = "projects__project project1">
+                <div class = "projects__project__image">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="assets/images/Responsive-Large.png" />
+                        <source media="(min-width: 700px)" srcset="assets/images/Responsive-Medium.png" />
+                        <source media="(min-width: 0px)" srcset="assets/images/Responsive-Small.png" />
+                        <!-- Default image -->
+                        <img class = "projects__project__image--img" src="assets/images/Responsive-Medium.png">
+                    </picture>
                 </div>
-                <div class="projects__project__body projects__project__body--left">
-                    <p class = "projects__project__body--description">  Hydrate is an app that allows users to track their water intake and understand their hydration levels by watering a virtual plant throughout the day.
-                    <br>
-                    I was tasked with designing and rebranding an app of my choice as well as develop the interactions for the app. This included analyzing the a task flow and app flow of MyWater and developing a high fidelity wireframe, wire flow, IX flow, interaction guides, an an animated prototype for Hydrate. The programs used for this design were Figma and Adobe After Effects. 
-                    </p>
-                    <button class = "project__body--button" >
-                        <a href = "hydrate.html" class = "project__body--button--text">View Case Study</a>
-                    </button>
+
+                <div class = "projects__project__text">
+                    <h4 class = "projects__project__text--title">Responsive Site- Web Design and Dev</h4>
                 </div>
             </div>
 
-            <!-- PROJECT 2 -->
-            <div class = "projects__project projects__project--right">
-                <div class = "project__title project__title--right">
-                    <h3 class = "project__title--name">NPR</h3>
-                    <h4 class = "project__title--date">Winter 2020</h4>
+            <!-- Project 2: Zodiac Project -->
+            <div class = "projects__project project2">
+                <div class = "projects__project__image">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="assets/images/Stardew-Large.png" />
+                        <source media="(min-width: 700px)" srcset="assets/images/Stardew-Medium.png" />
+                        <source media="(min-width: 0px)" srcset="assets/images/Stardew-Small.png" />
+                        <!-- Default image -->
+                        <img class = "projects__project__image--img" src="assets/images/Stardew-Medium.png">
+                    </picture>
                 </div>
-                <div class="projects__project__body projects__project__body--right">
-                    <p class = "projects__project__body--description"> National Public Radio is an independent, nonprofit media organization that was founded in 1970. Their mission is to create a more informed public. NPR are storytellers that connect across the country to explore the news, ideas, and what it means to be human. As they put it, “NPR makes local stories national, national stories local, and global stories personal” (npr.org).
-                    <br>
-                    This case study will be exploring ways to better NPR in reaching their mission via their mobile, tablet, and desktop states of their website. </p>
-                    <button class = "project__body--button">View Case Study</button>
+
+                <div class = "projects__project__text">
+                    <h4 class = "projects__project__text--title">Zodiac Chart - Web Design and Dev</h4>
                 </div>
             </div>
 
-            <!-- PROJECT 3 -->
-            <div class = "projects__project projects__project--left">
-                <div class = "project__title project__title--left">
-                    <h3 class = "project__title--name">YLPL</h3>
-                    <h4 class = "project__title--date">Spring 2020</h4>
-                </div>
-                <div class="projects__project__body projects__project__body--left">
-                    <p class = "projects__project__body--description">The Yorba Linda Public Library (YLPL) is a study space, a place of learning, creativity, and a place where people, ranging from children to seniors, can come together to create a unique community.
-                    Through observations and by speaking to the staff, three main improvements were found that can be made.
-                    <br>
-                    These improvements focus around library patrons understanding when their books have been returned, optimizing their calendar, and having librarians understand when users have turned in their books.  </p>
-                    <button class = "project__body--button">View Case Study</button>
-                </div>
+        <!-- Project 3: Hydrate Project -->
+        <div class = "projects__project project3">
+            <div class = "projects__project__image">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/images/Hydrate-Large.png" />
+                    <source media="(min-width: 700px)" srcset="assets/images/Hydrate-Medium.png" />
+                    <source media="(min-width: 0px)" srcset="assets/images/Hydrate-Small.png" />
+                    <!-- Default image -->
+                    <img class = "projects__project__image--img" src="assets/images/Hydrate-Medium.png">
+                </picture>
+            </div>
+
+            <div class = "projects__project__text">
+                <h4 class = "projects__project__text--title">Hydrate - Case Study</h4>
             </div>
         </div>
+
+        <!-- Project 4: Yorba Linda Public Library -->
+        <div class = "projects__project project4">
+            <div class = "projects__project__image">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="assets/images/YLPL-Large.png" />
+                    <source media="(min-width: 700px)" srcset="assets/images/YLPL-Medium.png" />
+                    <source media="(min-width: 0px)" srcset="assets/images/YLPL-Small.png" />
+                    <!-- Default image -->
+                    <img class = "projects__project__image--img" src="assets/images/YLPL-Medium.png">
+                </picture>
+            </div>
+
+            <div class = "projects__project__text">
+                <h4 class = "projects__project__text--title">Yorba Linda Library - Case Study</h4>
+            </div>
+        </div>
+    </div>
+
     </main>
     <footer>
         <p class="footer__text">Alexis Raya</p>
