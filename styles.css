@@ -150,13 +150,13 @@ header{
 }
 main{
     margin: 0rem 1.25rem;
+    min-height: 90vh;
 }
 a{
     text-decoration:none;
 }
 
 /*header styles*/
-
 .title{
     color: #2a1e12;
     justify-self: flex-start;
