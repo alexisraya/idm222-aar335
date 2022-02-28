@@ -242,6 +242,7 @@ br{
 
 .projects__project__button{
     background: none;
+    width:100%;
 	color: inherit;
 	border: none;
 	padding: 0;
@@ -281,7 +282,7 @@ br{
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    animation: fadeInUp .5s ease-in-out .1s forwards;
+    animation: fadeInUp .5s ease-in-out 0s forwards;
 
     transform: translateY(100%);
     opacity: 0;
@@ -315,6 +316,7 @@ br{
 
 .project-section__text{
     margin: 0rem 0rem .5rem 0rem;
+    line-height: 1.8rem;
 }
 
 .project__section__list{
