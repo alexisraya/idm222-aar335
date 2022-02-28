@@ -88,6 +88,18 @@
     }
 }
 
+@keyframes fadeInUp{
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 /*ANIMATIONS*/
 .fadeIn {
     animation: fadeIn 1s ease-in forwards;
@@ -224,6 +236,17 @@ a{
     opacity: 0;
 }
 
+.projects__project__button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    
+}
+
 .projects__project__image{
     background-color: var(--color-light-brown);
     min-height: 240px;
@@ -247,6 +270,50 @@ a{
 .projects__project__text--title{
     font-size: 1.25rem;
 }
+
+/* case study styles*/
+.project-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    animation: fadeInUp .5s ease-in-out .1s forwards;
+
+    transform: translateY(100%);
+    opacity: 0;
+}
+.project-title{
+    margin: 0;
+    text-align: center;
+}
+.project-title__title{
+    font-size: 1.75rem;
+    margin: 0;
+}
+.project-title__subtitle{
+    margin: .5rem 0 0 0;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+.project-title__link{
+    font-size: 1rem;
+}
+
+.project-section{
+    margin: 1rem 0;
+    max-width: 750px;
+}
+
+.project-section__title{
+    margin: 0rem 0rem .5rem 0rem;
+    font-size: 1.15rem;
+}
+
+.project-section__text{
+    margin: 0rem;
+}
+
+
 footer{
     background-color: var(--color-brown);
     margin: 1rem 0 0 0;
@@ -321,7 +388,7 @@ footer{
      --right-end:3;
     }
 
-    header{
+    /* header{
         background-color: var(--color-brown);
     }
     .title{
@@ -329,10 +396,10 @@ footer{
     }
     .menu__link{
         color:var(--color-beige);
-    }
+    } */
 
     .menu :hover{
-        color: var(--color-black);
+        color: var(--color-brown);
         cursor: default;
     }
     .intro{

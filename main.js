@@ -6,3 +6,4 @@ const proj3 = document.querySelector('js-proj3');
 const proj4 = document.querySelector('js-proj4');
 
 // When the projects come into view, I want them to fade in
+
