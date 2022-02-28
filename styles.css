@@ -145,7 +145,8 @@ h4{
 }
 
 
-p{
+p,
+li{
     font-family: 'Noto Serif', serif;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -314,6 +315,10 @@ br{
 
 .project-section__text{
     margin: 0rem 0rem .5rem 0rem;
+}
+
+.project__section__list{
+    margin-top: .5rem;
 }
 
 
