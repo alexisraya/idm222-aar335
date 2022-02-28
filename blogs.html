@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexis Raya - Art and Design</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Alexis Raya</h1>
+            <h2>Art and Design</h2>
+        </div>
+        <nav class="menu">
+            <a class="menu__link" href="index.html">Projects</a>
+            <!-- <a class="menu__link">About Me</a> -->
+            <a class="menu__link">Blog</a>
+        </nav>
+    </header>
+    <main>
+        <div class = "projects projects--visible js-projects">
+            <!-- Blog 1: La Jetee Design Elements -->
+            <div class = "projects__project project1">
+                <button class= "projects__project__button" onclick="location.href = 'responsive-project.html';">
+                    <div class = "projects__project__image blog-image">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="assets/images/LeJeteeCover-Medium.png" />
+                            <source media="(min-width: 0px)" srcset="assets/images/LeJeteeCover-Small.png" />
+                            <!-- Default image -->
+                            <img class = "projects__project__image--img" src="assets/images/LeJeteeCover-Medium.png">
+                        </picture>
+                    </div>   
+                </button>
+                
+
+                <div class = "projects__project__text">
+                    <h4 class = "projects__project__text--title">Design Elements of Le Jette</h4>
+                </div>
+            </div>
+    </div>
+
+    </main>
+    <footer>
+        <p class="footer__text">Alexis Raya</p>
+        <p class="footer__text">714 - 766 - 9694</p>
+        <p class="footer__text">alexisraya07@gmail.com</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

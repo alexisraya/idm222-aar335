@@ -323,6 +323,11 @@ br{
     margin-top: .5rem;
 }
 
+/*blog styles*/
+.blog-image{
+    border-radius: 50px;
+}
+
 
 footer{
     background-color: var(--color-brown);
