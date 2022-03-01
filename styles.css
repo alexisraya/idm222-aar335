@@ -234,6 +234,7 @@ br{
 
 .projects__project{
     margin-bottom: 1.5rem;
+    opacity: 0;
 }
 
 .projects__project--hidden{
