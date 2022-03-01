@@ -282,6 +282,7 @@ br{
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
+    padding: 0rem 1.25rem;
     animation: fadeInUp .5s ease-in-out 0s forwards;
 
     transform: translateY(100%);
@@ -311,11 +312,11 @@ br{
 
 .project-section__title{
     margin: 0rem 0rem .5rem 0rem;
-    font-size: 1.15rem;
+    font-size: 1.35rem;
 }
 
 .project-section__text{
-    margin: 0rem 0rem .5rem 0rem;
+    margin: 0rem 0rem 1.2rem 0rem;
     line-height: 1.8rem;
 }
 
@@ -324,6 +325,10 @@ br{
 }
 
 /*blog styles*/
+.blog-image-container{
+    border-radius: 50px;
+}
+
 .blog-image{
     border-radius: 50px;
 }
