@@ -346,6 +346,11 @@ br{
     margin-top: .5rem;
 }
 
+.project-section__image{
+    display: flex;
+    justify-content: center;
+}
+
 /*gallery styles*/
 .gallery{
     display: grid;
