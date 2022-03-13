@@ -350,6 +350,11 @@ br{
     display: flex;
     justify-content: center;
 }
+.project-section__gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
 
 /*gallery styles*/
 .gallery{
