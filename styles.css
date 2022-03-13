@@ -277,6 +277,9 @@ br{
     width:100%;
 }
 
+.projects__project__button:active{
+    box-shadow: none;
+}
 .projects__project__image{
     align-items: center;
     display: flex;
@@ -300,12 +303,11 @@ br{
 /* case study styles*/
 .project-wrapper{
     align-items: center;
-    animation: fadeInUp .5s ease-in-out 0s forwards;
+    animation: fadeIn .5s ease-in-out 0s forwards;
     display: flex;
     flex-direction: column;
     margin-top: 4rem;
     padding: 0rem 1.25rem;
-    transform: translateY(100%);
     opacity: 0;
 }
 .project-title{
@@ -348,17 +350,16 @@ br{
 .gallery{
     display: grid;
     column-gap: .5rem;
+    height: 100%;
     row-gap: .5rem;
     width: 100%;
-    height: 100%;
-    border-radius: 5px;
 }
 .gallery__image{
-    width: 100%;
+    border-radius: 5px;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
     opacity: 0;
+    width: 100%;
 }
 
 
