@@ -15,25 +15,98 @@
             <h2>Art and Design</h2>
         </div>
         <nav class="menu">
-            <a class="menu__link" href="index.html">Case Studies</a>
+            <a class="menu__link" href="case-studies.html">Case Studies</a>
             <!-- <a class="menu__link">About Me</a> -->
-            <a class="menu__link" href="blogs.html">Creative</a>
+            <a class="menu__link" href="creative.html">Creative</a>
         </nav>
     </header>
-
+    <!-- <h4 class = "intro__text--paragraph">Take a look into my in depth studies on websites, apps, and more!</h4> -->
     <main>
-        <div class = "wrapper">
-            <div class = "intro">
-                <div class = "intro__spacer"></div>
-                <div class = "intro__bunch">
-                    <h3 class = "intro__title">Case Studies</h3>
-                    <div class = "intro__text">
-                        <h4 class = "intro__text--paragraph">Take a look into my in depth studies on websites, apps, and more!</h4>
-                    </div>
+        <div class = "intro">
+            <div class = "intro__spacer">
+            </div>
+            <div class = "intro__bunch">
+                <div class = "intro__text">
+                    <h3 class="intro__text--opening">Case Studies</h3>
+                    <h4 class="intro__text--paragraph">All of my case studies seek to tell my story of my creative process and design decisions for each project.</h4>
+                    <h4 class="intro__text--paragraph">Take a look into my in depth studies on websites, apps, and more!</h4>
                 </div>
+                
             </div>
             <div class = "intro__peak">
-                <h4 class = "intro__peak--text">View my work below</h4>
+                <h4 class = "intro__peak--text"></h4>
+            </div>
+        </div>
+        <div class = "projects projects--visible js-projects">
+            <!-- Project 1: Responsive Project -->
+            <div class = "projects__project project1 js-proj1">
+                <button class= "projects__project__button" onclick="location.href = 'responsive-project.html';">
+                    <div class = "projects__project__image">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="assets/images/Responsive-Large.png" />
+                            <source media="(min-width: 700px)" srcset="assets/images/Responsive-Medium.png" />
+                            <source media="(min-width: 0px)" srcset="assets/images/Responsive-Small.png" />
+                            <!-- Default image -->
+                            <img class = "projects__project__image--img" src="assets/images/Responsive-Medium.png">
+                        </picture>
+                    </div>
+                    <div class = "projects__project__text">
+                        <h4 class = "projects__project__text--title">Responsive Site - Web Design and Dev</h4>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Project 2: Zodiac Project -->
+            <div class = "projects__project project2 js-proj2">
+                <button class= "projects__project__button" onclick="location.href = 'stardew-zodiac.html';">
+                    <div class = "projects__project__image">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="assets/images/Stardew-Large.png" />
+                            <source media="(min-width: 700px)" srcset="assets/images/Stardew-Medium.png" />
+                            <source media="(min-width: 0px)" srcset="assets/images/Stardew-Small.png" />
+                            <!-- Default image -->
+                            <img class = "projects__project__image--img" src="assets/images/Stardew-Medium.png">
+                        </picture>
+                    </div>
+                    <div class = "projects__project__text">
+                        <h4 class = "projects__project__text--title">Zodiac Chart - Web Design and Dev</h4>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Project 3: Hydrate Project -->
+            <div class = "projects__project project3 js-proj3">
+                <button class= "projects__project__button" onclick="location.href = 'hydrate.html';">
+                    <div class = "projects__project__image">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="assets/images/Hydrate-Large.png" />
+                            <source media="(min-width: 700px)" srcset="assets/images/Hydrate-Medium.png" />
+                            <source media="(min-width: 0px)" srcset="assets/images/Hydrate-Small.png" />
+                            <!-- Default image -->
+                            <img class = "projects__project__image--img" src="assets/images/Hydrate-Medium.png">
+                        </picture>
+                    </div>
+                    <div class = "projects__project__text">
+                        <h4 class = "projects__project__text--title">Hydrate - Case Study</h4>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Project 4: Yorba Linda Public Library -->
+            <div class = "projects__project project4 js-proj4">
+                <button class= "projects__project__button" onclick="location.href = 'ylpl.html';">
+                    <div class = "projects__project__image">
+                        <picture>
+                            <source media="(min-width: 900px)" srcset="assets/images/YLPL-Medium.png" />
+                            <source media="(min-width: 0px)" srcset="assets/images/YLPL-Small.png" />
+                            <!-- Default image -->
+                            <img class = "projects__project__image--img" src="assets/images/YLPL-Small.png">
+                        </picture>
+                    </div>
+                    <div class = "projects__project__text">
+                        <h4 class = "projects__project__text--title">Yorba Linda Library - Case Study</h4>
+                    </div>
+                </button>
             </div>
         </div>
     </main>
