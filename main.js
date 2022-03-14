@@ -1,6 +1,7 @@
 //VARIABLES
 const windowPath = window.location.pathname;
-if (windowPath.includes("index") || windowPath.includes("case-studies") ){
+
+if (windowPath == "/" || windowPath.includes("case-studies") ){
     const projects = document.querySelector('.js-projects');
     const proj1 = document.querySelector('.js-proj1');
     const proj2 = document.querySelector('.js-proj2');
@@ -16,8 +17,7 @@ if (windowPath.includes("index") || windowPath.includes("case-studies") ){
     
     });
 }
-
-if (windowPath.includes("creative")){
+else if (windowPath.includes("creative")){
     const gal1 = document.querySelector('.js-gallery1');
     const gal2 = document.querySelector('.js-gallery2');
     const gal3 = document.querySelector('.js-gallery3');
@@ -47,6 +47,22 @@ if (windowPath.includes("creative")){
         applyClassWhenInView(gal10, 'fadeIn');
         applyClassWhenInView(gal11, 'fadeIn');
         applyClassWhenInView(gal12, 'fadeIn');
+    });
+}
+else if(!windowPath.includes("hydrate") || !windowPath.includes("stardew") || !windowPath.includes("ylpl") || !windowPath.includes("responsive")){
+    const projects = document.querySelector('.js-projects');
+    const proj1 = document.querySelector('.js-proj1');
+    const proj2 = document.querySelector('.js-proj2');
+    const proj3 = document.querySelector('.js-proj3');
+    const proj4 = document.querySelector('.js-proj4');
+    
+    window.addEventListener("scroll", function () {
+        applyClassWhenInView(projects, 'fadeIn');
+        applyClassWhenInView(proj1, 'fadeIn');
+        applyClassWhenInView(proj2, 'fadeIn');
+        applyClassWhenInView(proj3, 'fadeIn');
+        applyClassWhenInView(proj4, 'fadeIn');
+    
     });
 }
 // Break this out to be reusable
