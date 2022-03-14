@@ -1,4 +1,18 @@
-//VARIABLES
+// FOR NAV
+const mobileNavButton = document.querySelector(".js-nav-button");
+const mobileNav = document.querySelector(".js-nav-menu");
+
+mobileNavButton.addEventListener("click",function(){
+    if(mobileNav.classList.contains("mobile-menu--closed")){
+        mobileNav.classList.remove("mobile-menu--closed");
+        mobileNav.classList.add("mobile-menu--open")
+    }
+    else if(mobileNav.classList.contains("mobile-menu--open")){
+        mobileNav.classList.remove("mobile-menu--open");
+        mobileNav.classList.add("mobile-menu--closed")
+    }
+});
+//FOR FADEINS
 const windowPath = window.location.pathname;
 
 if (windowPath == "/" || windowPath.includes("case-studies") ){

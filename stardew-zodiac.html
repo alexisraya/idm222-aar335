@@ -14,11 +14,23 @@
             <h1 class="title__title"><a class="title__title--link" href = "index.html">Alexis Raya</a></h1>
             <h2>Art and Design</h2>
         </div>
-        <nav class="menu">
-            <a class="menu__link" href="case-studies.html">Case Studies</a>
-            <!-- <a class="menu__link">About Me</a> -->
-            <a class="menu__link" href="creative.html">Creative</a>
-        </nav>
+        <div class = "mobile-nav">
+            <button class="mobile-nav__button js-nav-button">
+                <img class="mobile-nav__button--img" src = "assets/images/Menu.png" alt="Menu">
+            </button>
+            <nav class="mobile-nav__menu mobile-menu--closed menu js-nav-menu">
+                <a class="mobile-nav__menu__link menu__link" href="case-studies.html">Case Studies</a>
+                <!-- <a class="menu__link">About Me</a> -->
+                <a class="mobile-nav__menu__link menu__link" href="creative.html">Creative</a>
+            </nav>
+        </div>
+        <div class = "reg-nav">
+            <nav class="reg-nav__menu menu">
+                <a class="menu__link" href="case-studies.html">Case Studies</a>
+                <!-- <a class="menu__link">About Me</a> -->
+                <a class="menu__link" href="creative.html">Creative</a>
+            </nav>
+        </div>
     </header>
     <main>
         <div class = "project-wrapper">
@@ -76,5 +88,6 @@
         <p class="footer__text">714 - 766 - 9694</p>
         <p class="footer__text">alexisraya07@gmail.com</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

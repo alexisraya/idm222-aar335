@@ -200,6 +200,55 @@ br{
     margin: .25rem;
 }
 
+.mobile-nav{
+    align-self: center;
+}
+
+.mobile-nav__button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.mobile-nav__menu{
+    background-color: var(--color-light-brown);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    right: 0;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    position: fixed;
+    width: 75%;
+    z-index: 100;
+
+    transition: all .15s ease-in;
+}
+
+.mobile-nav__menu--open {
+    transform: translateX(0%);
+    transition: all .15s ease-in;
+}
+
+/* When we close the menu, slide it back off screen */
+.mobile-menu--closed {
+    /* This percentage is the width of the parent */
+    transform: translateX(110%);
+    transition: all .15s ease-in;
+}
+
+.mobile-nav__menu{
+    font-size: 1.5rem;
+}
+
+.mobile-nav__menu__link{
+    padding: 2rem;
+}
+.reg-nav{
+    display: none;
+}
 /*intro styles*/
 .intro{
     display: flex;
@@ -406,6 +455,13 @@ footer{
    .menu__link{
         margin: 1.25rem;
    }
+   .mobile-nav{
+    display: none;
+    }
+    .reg-nav{
+        display: block;
+        align-self: center;
+    }
    .intro__bunch{
         flex-direction: row;
         justify-content: space-between;
