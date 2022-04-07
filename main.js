@@ -63,7 +63,7 @@ else if (windowPath.includes("creative")){
         applyClassWhenInView(gal12, 'fadeIn');
     });
 }
-else if(!windowPath.includes("hydrate") || !windowPath.includes("stardew") || !windowPath.includes("ylpl") || !windowPath.includes("responsive")){
+else if(!windowPath.includes("hydrate") && !windowPath.includes("stardew") && !windowPath.includes("ylpl") && !windowPath.includes("responsive")){
     const projects = document.querySelector('.js-projects');
     const proj1 = document.querySelector('.js-proj1');
     const proj2 = document.querySelector('.js-proj2');
@@ -92,7 +92,7 @@ function applyClassWhenInView(
     const distanceFromTop = positionOfElement.y;
     
     // When our element is in our viewport and halfway to the top...
-    if (distanceFromTop < viewportHeight / 2) {
+    if (distanceFromTop < viewportHeight / 1.15) {
 
         // Lets check if the class is on our element
         // If not, we have to add the class to our element

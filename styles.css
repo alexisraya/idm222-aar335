@@ -249,6 +249,11 @@ br{
 .reg-nav{
     display: none;
 }
+
+.home-wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+}
 /*intro styles*/
 .intro{
     display: flex;
